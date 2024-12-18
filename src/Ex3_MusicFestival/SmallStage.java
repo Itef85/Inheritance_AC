@@ -28,4 +28,13 @@ class SmallStage extends Event{
         }
 
     }
+
+    public int getNumMem() {
+        return numMem;
+    }
+
+    @Override
+    public String getLocation() {
+        return location;
+    }
 }//class

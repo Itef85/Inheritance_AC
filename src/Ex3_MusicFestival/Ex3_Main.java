@@ -1,5 +1,7 @@
 package Ex3_MusicFestival;
 
+import com.sun.tools.javac.Main;
+
 import java.util.ArrayList;
 
 public class Ex3_Main {
@@ -14,11 +16,11 @@ public class Ex3_Main {
         allEvents.add(new MainStageEvent( "Taylor Swift", "Music"));
         allEvents.add(new MainStageEvent( "Johnny Stimson", "Music"));
         //CraftBooths
-        allEvents.add(new craftBooths( "Sally's Strings", "Craft", "Booth 1"));
-        allEvents.add(new craftBooths( "Dolly's Dolls", "Craft", "Booth 2"));
-        allEvents.add(new craftBooths( "Bianca's Bracelets", "Craft", "Booth 3"));
-        allEvents.add(new craftBooths( "Wendy's WindChimes", "Craft", "Booth 4"));
-        allEvents.add(new craftBooths( "Kent's KeyChains", "Craft", "Booth 5"));
+        allEvents.add(new craftBooths( "Sallys Strings", "Craft", "Booth 1"));
+        allEvents.add(new craftBooths( "Dollys Dolls", "Craft", "Booth 2"));
+        allEvents.add(new craftBooths( "Biancas Bracelets", "Craft", "Booth 3"));
+        allEvents.add(new craftBooths( "Wendys WindChimes", "Craft", "Booth 4"));
+        allEvents.add(new craftBooths( "Kents KeyChains", "Craft", "Booth 5"));
         //smallStage
         allEvents.add(new SmallStage( "Caity Krone", "Music", 1));
         allEvents.add(new SmallStage( "Mimi Bay", "Music", 1));
@@ -105,10 +107,33 @@ public class Ex3_Main {
 
             } else if (choice == 2){
 
+                System.out.println("What is The Name of The Event?");
+                String Name = Library.input.nextLine();
+
+                int foundIndex = searchByName(allEvents, Name);
+                if(foundIndex > -1  ){
+
+
+
+                if(allEvents.get(foundIndex) instanceof MainStageEvent){
+                    System.out.println("yup");
+                } else  if(allEvents.get(foundIndex) instanceof craftBooths){
+                    System.out.println("yup4");
+                } else if(allEvents.get(foundIndex) instanceof NonMusicEvent){
+                    System.out.println("yup2");
+                } else if(allEvents.get(foundIndex) instanceof SmallStage){
+                    System.out.println("yup3");
+                }
 
 
 
 
+
+
+                }else{
+                    System.out.println(foundIndex);
+                    System.out.println("Team not found please try again");
+                }
 
 
             } else {
@@ -118,6 +143,16 @@ public class Ex3_Main {
         }
 
     }//run
+
+
+    public static int searchByName( ArrayList<Event> list, String searchTerm ){
+        for (int i = 0; i < list.size(); i++) {
+            if(searchTerm.equalsIgnoreCase( list.get(i).getEventName() )){
+                return i;
+            }
+        }
+        return -1;
+    }
 
 
 }//class

@@ -17,8 +17,7 @@ class NonMusicEvent extends Event {
     }
 
 
-
-
-
-
+    public int getRent() {
+        return rent;
+    }
 }

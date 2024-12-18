@@ -30,4 +30,20 @@ public class craftBooths extends NonMusicEvent{
     }
 
 
+    public double getTax() {
+        return tax;
+    }
+
+    public int getSales() {
+        return sales;
+    }
+
+    public int getRent() {
+        return rent;
+    }
+
+    public double getCashedOwed() {
+        return cashedOwed;
+    }
 }
+
