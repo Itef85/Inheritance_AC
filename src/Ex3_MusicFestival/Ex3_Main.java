@@ -47,34 +47,75 @@ public class Ex3_Main {
 
         }//for
 
-        System.out.println("What type of Event is this? \nMainStage\nSmallStage\nCraft");
-        String event = Library.input.nextLine();
+        while (true) {
+            System.out.println();
+            System.out.println("Press 1 To Add An Event.\nPress 2 to Search for Event\nPress 3 to Exit");
 
-        if(event.equalsIgnoreCase("MainStage")){
-            System.out.println("What Is The Name of The Proformers");
-            String name = Library.input.nextLine();
-            System.out.println("What Type of Proformace is it ");
-            String type = Library.input.nextLine();
-            allEvents.add(new MainStageEvent ( name, type));
-        } else if (event.equalsIgnoreCase("SmallStage")){
-            System.out.println("What Is The Name of The Proformers");
-            String name = Library.input.nextLine();
-            System.out.println("What Is The type of Proformance");
-            String type = Library.input.nextLine();
-            System.out.println("How many Members?");
-            String nummem = Library.input.nextLine();
+            int choice = Library.input.nextInt();
+            Library.input.nextLine();
 
-            allEvents.add(new SmallStage( name, type, nummem));
-        } else if(event.equalsIgnoreCase("Craft")){
-            System.out.println("What is The Name of The Booth?");
-            String Name = Library.input.nextLine();
+            if (choice == 1) {
 
-            allEvents.add(new craftBooths( Name, "Craft", //craft.size));
+
+                System.out.println("What type of Event is this? \nMainStage\nSmallStage\nCraft");
+                String event = Library.input.nextLine();
+
+                if (event.equalsIgnoreCase("MainStage")) {
+                    System.out.println("What Is The Name of The Proformers");
+                    String name = Library.input.nextLine();
+                    System.out.println("What Type of Proformace is it ");
+                    String type = Library.input.nextLine();
+                    allEvents.add(new MainStageEvent(name, type));
+
+                    for (int i = 0; i < allEvents.size(); i++) {
+
+                        System.out.println(allEvents.get(i).getEventName());
+
+                    }//for
+
+                } else if (event.equalsIgnoreCase("SmallStage")) {
+                    System.out.println("What Is The Name of The Proformers");
+                    String name = Library.input.nextLine();
+                    System.out.println("What Is The type of Proformance");
+                    String type = Library.input.nextLine();
+                    System.out.println("How many Members?");
+                    int nummem = Library.input.nextInt();
+
+                    allEvents.add(new SmallStage(name, type, nummem));
+
+                    for (int i = 0; i < allEvents.size(); i++) {
+
+                        System.out.println(allEvents.get(i).getEventName());
+
+                    }//for
+
+                } else if (event.equalsIgnoreCase("Craft")) {
+                    System.out.println("What is The Name of The Booth?");
+                    String Name = Library.input.nextLine();
+
+                    allEvents.add(new craftBooths(Name, "Craft", "empty booth"));
+
+                    for (int i = 0; i < allEvents.size(); i++) {
+
+                        System.out.println(allEvents.get(i).getEventName());
+
+                    }//for
+
+                }
+
+            } else if (choice == 2){
+
+
+
+
+
+
+
+            } else {
+
+                break;
+            }
         }
-
-
-
-
 
     }//run
 
