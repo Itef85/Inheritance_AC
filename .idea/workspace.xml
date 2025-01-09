@@ -1,15 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d347db3d-fdc9-4f1b-940f-de355116165b" name="Changes" comment="golf project">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Ex0_MenuTemplate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Ex0_MenuTemplate.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Ex3_MusicFestival/Ex3_Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Ex3_MusicFestival/Ex3_Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Ex3_MusicFestival/SmallStage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Ex3_MusicFestival/SmallStage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Library.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Utilities/Library.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TwoD_Arrays/Ex1_Golf.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TwoD_Arrays/Ex1_Golf.java" afterDir="false" />
-    </list>
+    <list default="true" id="d347db3d-fdc9-4f1b-940f-de355116165b" name="Changes" comment="tictactoe progect" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -128,7 +120,14 @@
       <option name="project" value="LOCAL" />
       <updated>1736275188903</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="tictactoe progect">
+      <created>1736448009637</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1736448009637</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -147,7 +146,8 @@
     <MESSAGE value="cblach" />
     <MESSAGE value="Filter by event type - Asks for the type of event and prints all instance variables for that type of event" />
     <MESSAGE value="golf project" />
-    <option name="LAST_COMMIT_MESSAGE" value="golf project" />
+    <MESSAGE value="tictactoe progect" />
+    <option name="LAST_COMMIT_MESSAGE" value="tictactoe progect" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
