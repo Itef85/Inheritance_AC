@@ -114,17 +114,23 @@ public class Ex3_Main {
                 if(foundIndex > -1  ){
 
 
+                    for (int i = 0; i < allEvents.size(); i++) {
+
 
                 if(allEvents.get(foundIndex) instanceof MainStageEvent){
                     System.out.println("yup");
+//                    ((MainStageEvent)allEvents.get(i)).printTech();
                 } else  if(allEvents.get(foundIndex) instanceof craftBooths){
                     System.out.println("yup4");
+//                    ((craftBooths)allEvents.get(i)).getRent();
                 } else if(allEvents.get(foundIndex) instanceof NonMusicEvent){
                     System.out.println("yup2");
+//                    ((NonMusicEvent)allEvents.get(i)).getRent();
                 } else if(allEvents.get(foundIndex) instanceof SmallStage){
                     System.out.println("yup3");
+//                    ((SmallStage)allEvents.get(i)).getNumMem();
                 }
-
+                    }//for
 
 
 

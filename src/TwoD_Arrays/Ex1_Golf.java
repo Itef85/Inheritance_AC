@@ -8,7 +8,35 @@ public class Ex1_Golf {
 
     int[][] scorecard = new int[4][18];
 
+    scorecard[0][0] = 4;
+    scorecard[1][0] = 5;
+    scorecard[2][0] = 6;
+    scorecard[3][0] = 7;
 
+    scorecard[0][1] = 5;
+    scorecard[1][1] = 5;
+    scorecard[2][1] = 8;
+    scorecard[3][1] = 9;
+
+//    System.out.println(scorecard.length);
+
+    for(int row = 0; row < scorecard.length; row++){
+        int total = 0;
+        for (int col = 0; col < scorecard[row].length; col++) {
+            System.out.print(scorecard[row][col] + "  "  );
+            total += scorecard[row][col];
+        }//for loop col
+        System.out.println("  " + names[row] + " Score: " + total);
+    }//for loop row
+
+        //total each hole
+        for (int col = 0; col < 18; col++) {
+            int holeTotal = 0;
+            for(int row = 0; row < scorecard.length; row++) {
+                holeTotal += scorecard[row][col];
+            }//for
+            System.out.print(holeTotal + "  ");
+        }//for
 
 
     }//run

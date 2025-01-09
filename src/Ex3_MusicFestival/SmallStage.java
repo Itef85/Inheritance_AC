@@ -3,7 +3,7 @@ package Ex3_MusicFestival;
 class SmallStage extends Event{
 
     public int numMem;
-    public String location = "Crane";
+    public String location = "";
 
     public SmallStage(String name, String type, int numMem){
         super(name, type);
@@ -29,9 +29,12 @@ class SmallStage extends Event{
 
     }
 
+
+
     public int getNumMem() {
         return numMem;
     }
+
 
     @Override
     public String getLocation() {
