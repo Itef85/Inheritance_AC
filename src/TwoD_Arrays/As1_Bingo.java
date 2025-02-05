@@ -9,6 +9,7 @@ public class As1_Bingo {
         char[] Titles = { 'B','I','N','G','O'};
         int num;
 
+
         int[][] BingoCard = {
 
                 generateArray(5, 1, 15),
@@ -25,21 +26,40 @@ public class As1_Bingo {
            String intput = Library.input.nextLine();
            if ( intput == ""){
                System.out.println();
+               boolean isthere = false;
 
                num =  Library.myRandom(1,75);
 
                for (int i = 0; i < BingoCard.length; i++) {
+                   for (int j = 0; j < BingoCard.length; j++) {
+                       if(BingoCard[i][j] == num){
+                           isthere = true;
+                           System.out.println("Found");
 
+                           if(isthere == true){
+                               BingoCard[i][j]*= -1;
+                           }
+                       }
 
+                   }
 
                }
 
 
-
+               if(isthere == false){
+                   System.out.println("Not Found");
+               }
                printBingo(BingoCard, Titles);
-               System.out.println(num);
-           }
+               System.out.println( "The number chosen is: " + num);
 
+               CheckWin(int[][] arr);
+
+
+
+           }
+        if(isWin == true){
+            break;
+        }
 
         }
     }//run
@@ -68,4 +88,29 @@ public class As1_Bingo {
    };
 
 
-}//calss
+    public static boolean CheckWin(int[][] arr){
+        boolean iswin = false;
+
+        for (int i = 0; i < arr.length; i++) {
+                if(arr[0][i] < 0 && arr[1][i] < 0 && arr[2][i] < 0 && arr[3][i]< 0 && arr[4][i] < 0){
+                    iswin = true;
+                    System.out.println("you Win");
+                }
+                else if(arr[i][0] < 0 && arr[i][1]< 0  && arr[i][2] < 0 && arr[i][3] < 0 && arr[i][4] < 0){
+                    iswin = true;
+                System.out.println("you Win");
+            }
+
+        }
+
+
+        return iswin;
+    };
+
+
+
+
+
+
+
+}//class

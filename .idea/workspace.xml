@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d347db3d-fdc9-4f1b-940f-de355116165b" name="Changes" comment="Bingo">
+    <list default="true" id="d347db3d-fdc9-4f1b-940f-de355116165b" name="Changes" comment="Bingo part 80*">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/TwoD_Arrays/As1_Bingo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TwoD_Arrays/As1_Bingo.java" afterDir="false" />
     </list>
@@ -69,7 +69,7 @@
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;master&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;F:/CompSci30_AttC/Inheritance_AC&quot;,
+    &quot;last_opened_file_path&quot;: &quot;F:/CompSci30_AttC/OOP_AC&quot;,
     &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
@@ -176,7 +176,15 @@
       <option name="project" value="LOCAL" />
       <updated>1738262690012</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Bingo part 80*">
+      <option name="closed" value="true" />
+      <created>1738608001378</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1738608001378</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -197,6 +205,7 @@
     <MESSAGE value="golf project" />
     <MESSAGE value="tictactoe progect" />
     <MESSAGE value="Bingo" />
-    <option name="LAST_COMMIT_MESSAGE" value="Bingo" />
+    <MESSAGE value="Bingo part 80*" />
+    <option name="LAST_COMMIT_MESSAGE" value="Bingo part 80*" />
   </component>
 </project>
