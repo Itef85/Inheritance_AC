@@ -52,12 +52,12 @@ public class As1_Bingo {
                printBingo(BingoCard, Titles);
                System.out.println( "The number chosen is: " + num);
 
-               CheckWin(int[][] arr);
+               CheckWin(BingoCard);
 
 
 
            }
-        if(isWin == true){
+        if(CheckWin(BingoCard) == true){
             break;
         }
 
