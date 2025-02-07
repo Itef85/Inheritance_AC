@@ -94,11 +94,11 @@ public class As1_Bingo {
         for (int i = 0; i < arr.length; i++) {
                 if(arr[0][i] < 0 && arr[1][i] < 0 && arr[2][i] < 0 && arr[3][i]< 0 && arr[4][i] < 0){
                     iswin = true;
-                    System.out.println("you Win");
+                    System.out.println("BINGO!");
                 }
                 else if(arr[i][0] < 0 && arr[i][1]< 0  && arr[i][2] < 0 && arr[i][3] < 0 && arr[i][4] < 0){
                     iswin = true;
-                System.out.println("you Win");
+                System.out.println("BINGO!");
             }
 
         }
