@@ -1,5 +1,7 @@
 package TwoD_Arrays;
 
+import Utilities.Library;
+
 public class As5_Vigenere {
     public static final String ANSI_PURPLE = "\u001B[35m";
     public static final String ANSI_RESET = "\u001B[0m";
@@ -10,7 +12,15 @@ public class As5_Vigenere {
                 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'};
         char[][] vigenere = createVSquare(alphabet);
         printSquare(vigenere);
+
+        System.out.println("Press enter to decode");
+        String intput = Library.input.nextLine();
+        if (intput == "") {
+            deCoder(vigenere, keyWord, alphabet);
+        }
+
     }//run
+
 
     private static char[][] createVSquare(char[] alphabet) {
         char[][] square = new char[alphabet.length][alphabet.length];
@@ -58,5 +68,48 @@ public class As5_Vigenere {
     public static char getChar(char[][] square, int rowNum, int colNum) {
         return square[rowNum][colNum];
     }
+
+    public static void deCoder(char[][] vigenere, char[] keyWord, char[] alphabet) {
+        System.out.println("what is the coded scentence?");
+        String word = Library.input.nextLine().toUpperCase();
+        int row ;
+        int col ;
+
+        StringBuilder sb = new StringBuilder();
+
+
+
+    }
+
+
+
+
+
+
+
+//    public static void deCoder(char[][] vigenere, char[] keyWord) {
+//        System.out.println("Enter the coded message:");
+//        String word = Library.input.nextLine().toUpperCase();
+//
+//        char[] alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".toCharArray();
+//        StringBuilder decodedMessage = new StringBuilder();
+//
+//        for (int i = 0; i < word.length(); i++) {
+//            char encodedChar = word.charAt(i);
+//            char keyChar = keyWord[i % keyWord.length];
+//
+//            int row = linearSearch(alphabet, keyChar); // Find key letter's row in Vigenère square
+//            int col = linearSearch(vigenere[row], encodedChar); // Find encoded letter in that row
+//
+//            decodedMessage.append(alphabet[col]); // Convert to original letter
+//        }
+//
+//        System.out.println("Decoded message: " + decodedMessage);
+//    }
+
+
+
+
+
 
 }//end class
