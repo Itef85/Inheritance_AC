@@ -17,6 +17,7 @@ public class As5_Vigenere {
         String intput = Library.input.nextLine();
         if (intput == "") {
             deCoder(vigenere, keyWord, alphabet);
+         //   deCoder(vigenere, alphabet);
         }
 
     }//run
@@ -72,27 +73,32 @@ public class As5_Vigenere {
     public static void deCoder(char[][] vigenere, char[] keyWord, char[] alphabet) {
         System.out.println("what is the coded scentence?");
         String word = Library.input.nextLine().toUpperCase();
-        int row ;
-        int col ;
+
 
         StringBuilder sb = new StringBuilder();
 
+        for (int i = 0; i < word.length(); i++) {
+            char encodedChar = word.charAt(i);
+            char keyChar = keyWord[i % keyWord.length];
 
+            int row = linearSearch(alphabet, keyChar); // Find key letter's row in Vigenère square
+            int col = linearSearch(vigenere[row], encodedChar); // Find encoded letter in that row
 
+            sb.append(alphabet[col]); // Convert to original letter
+
+        }
+        System.out.println("Decoded message: " + sb);
     }
 
 
-
-
-
-
-
-//    public static void deCoder(char[][] vigenere, char[] keyWord) {
-//        System.out.println("Enter the coded message:");
+//    public static void deCoder(char[][] vigenere, char[] alphabet) {
+//        System.out.println("what is the coded scentence?");
 //        String word = Library.input.nextLine().toUpperCase();
-//
-//        char[] alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".toCharArray();
-//        StringBuilder decodedMessage = new StringBuilder();
+//        Library.input.nextLine();
+//        System.out.println("what is the key word? no spaces");
+//        String keyword = Library.input.nextLine().toUpperCase();
+//        char[] keyWord = keyword.toCharArray();
+//        StringBuilder sb = new StringBuilder();
 //
 //        for (int i = 0; i < word.length(); i++) {
 //            char encodedChar = word.charAt(i);
@@ -101,11 +107,12 @@ public class As5_Vigenere {
 //            int row = linearSearch(alphabet, keyChar); // Find key letter's row in Vigenère square
 //            int col = linearSearch(vigenere[row], encodedChar); // Find encoded letter in that row
 //
-//            decodedMessage.append(alphabet[col]); // Convert to original letter
-//        }
+//            sb.append(alphabet[col]); // Convert to original letter
 //
-//        System.out.println("Decoded message: " + decodedMessage);
+//        }
+//        System.out.println("Decoded message: " + sb);
 //    }
+
 
 
 
