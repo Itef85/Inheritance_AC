@@ -81,7 +81,7 @@ public class As5_Vigenere {
             char encodedChar = word.charAt(i);
             char keyChar = keyWord[i % keyWord.length];
 
-            int row = linearSearch(alphabet, keyChar); // Find key letter's row in Vigenère square
+            int row = linearSearch(alphabet, keyChar); // Find key letter's row in Vigenere square
             int col = linearSearch(vigenere[row], encodedChar); // Find encoded letter in that row
 
             sb.append(alphabet[col]); // Convert to original letter
