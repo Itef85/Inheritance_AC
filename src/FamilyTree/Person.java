@@ -20,4 +20,7 @@ public class Person {
         children.add(p);
     }
 
+    public String getName() {
+        return name;
+    }
 }//class
