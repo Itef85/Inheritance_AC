@@ -4,11 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d347db3d-fdc9-4f1b-940f-de355116165b" name="Changes" comment="countfaily">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/FamilyTree/FamilyTreeMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/FamilyTree/FamilyTreeMain.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/FamilyTree/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/FamilyTree/Person.java" afterDir="false" />
-    </list>
+    <list default="true" id="d347db3d-fdc9-4f1b-940f-de355116165b" name="Changes" comment="print from here function" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -273,7 +269,15 @@
       <option name="project" value="LOCAL" />
       <updated>1741714852093</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="print from here function">
+      <option name="closed" value="true" />
+      <created>1742233221812</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1742233221812</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -301,6 +305,7 @@
     <MESSAGE value="vis final 10 persent ask for keyword" />
     <MESSAGE value="new project family tree" />
     <MESSAGE value="countfaily" />
-    <option name="LAST_COMMIT_MESSAGE" value="countfaily" />
+    <MESSAGE value="print from here function" />
+    <option name="LAST_COMMIT_MESSAGE" value="print from here function" />
   </component>
 </project>
