@@ -2,6 +2,8 @@ package FamilyTree;
 
 import java.util.ArrayList;
 
+//import Utilities.Library;
+
 public class FamilyTreeMain {
 
     public static void run(){
@@ -14,7 +16,7 @@ public class FamilyTreeMain {
         //add child to Susan
         person1.children.get(0).addChild( new Person("Zain","Germany")  );
         //add child to Jill
-        person1.children.get(1).addChild( new Person("Atticus","USA")  );
+        person1.children.get(1).addChild( new Person("Atticus","IceLand")  );
         //add child to Bobette
         person1.children.get(2).addChild(new Person("Bob III", "Belise"));
         person1.children.get(2).addChild(new Person("Jasmine", "Canada"));
@@ -32,41 +34,57 @@ public class FamilyTreeMain {
 //generation 4
         //add child to Bella
         person1.children.get(1).children.get(0).children.get(0).addChild(new Person("Lucy", "Canada") );
-        person1.children.get(1).children.get(0).children.get(0).addChild(new Person("Jack", "UK") );
+        person1.children.get(1).children.get(0).children.get(0).addChild(new Person("Ryder", "UK") );
 
-    printFamily(person1);
-    countFamily(person1);
+        printFamily(person1);
+        System.out.println(countFamily(person1) + " People in total");
+        System.out.println("People who live in Canada");
+        printCanadians(person1);
+
+
 
     }//run
+
+    public static void printFromHere(Person ptemp){
+
+
+
+
+
+    }
+
+    public static void printCanadians(Person Ptemp){
+
+        if(Ptemp.getCountry().equalsIgnoreCase("canada")){
+            System.out.println( Ptemp.getName());
+            for (int i = 0; i < Ptemp.children.size(); i++) {
+                printCanadians(Ptemp.children.get(i));
+            }
+        }
+        else{
+            for (int i = 0; i < Ptemp.children.size(); i++) {
+                printCanadians(Ptemp.children.get(i));
+            }
+        }
+
+
+
+    };//printcanadians
 
    public static int countFamily (Person ptemp){
         int num = 1;
 
-       if(ptemp.children.size() == 0 ) {
-
-       }
-       else{
-           num ++;
-           for(int i=0; i< ptemp.children.size(); i++){
-               countFamily(ptemp.children.get(i));
+       if (ptemp.children.size() > 0) {
+           for (int i = 0; i < ptemp.children.size(); i++) {
+               num += countFamily(ptemp.children.get(i));
            }
        }
-//
-//       if (ptemp.children.size() > 0) {
-//           for (int i = 0; i < ptemp.children.size(); i++) {
-//               num += countFamily(ptemp.children.get(i)); // Accumulate the count
-//           }
-//       }
-//
+
 
        return num;
 
    };//countfamily
 
-    public static void printCanadians(Person Ptemp){
-
-
-    };//printcanadians
 
     public static String printFamily(Person ptemp){
 
@@ -83,6 +101,14 @@ public class FamilyTreeMain {
         return "";
     };//printfamily
 
+    public static int searchByName( ArrayList<Person> list, String searchTerm ){
+        for (int i = 0; i < list.size(); i++) {
+            if(searchTerm.equalsIgnoreCase( list.get(i).getName() )){
+                return i;
+            }
+        }
+        return -1;
+    }
 
 
 }//class

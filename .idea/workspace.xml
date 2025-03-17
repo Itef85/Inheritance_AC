@@ -4,7 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d347db3d-fdc9-4f1b-940f-de355116165b" name="Changes" comment="new project family tree" />
+    <list default="true" id="d347db3d-fdc9-4f1b-940f-de355116165b" name="Changes" comment="countfaily">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/FamilyTree/FamilyTreeMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/FamilyTree/FamilyTreeMain.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/FamilyTree/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/FamilyTree/Person.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -261,7 +265,15 @@
       <option name="project" value="LOCAL" />
       <updated>1741714830661</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="countfaily">
+      <option name="closed" value="true" />
+      <created>1741714852093</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1741714852093</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -288,6 +300,7 @@
     <MESSAGE value="started vis on decode" />
     <MESSAGE value="vis final 10 persent ask for keyword" />
     <MESSAGE value="new project family tree" />
-    <option name="LAST_COMMIT_MESSAGE" value="new project family tree" />
+    <MESSAGE value="countfaily" />
+    <option name="LAST_COMMIT_MESSAGE" value="countfaily" />
   </component>
 </project>
