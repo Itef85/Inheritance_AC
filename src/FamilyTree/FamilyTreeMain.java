@@ -1,22 +1,24 @@
 package FamilyTree;
 
+import Utilities.Library;
+
 import java.util.ArrayList;
 
 //import Utilities.Library;
 
 public class FamilyTreeMain {
 
-    public static void run(){
+    public static void run() {
 
         Person person1 = new Person("Bobbie", "Mexico");
-        person1.addChild(    new Person("Susan", "Canada")   );
-        person1.addChild(    new Person("Jill", "Canada")   );
-        person1.addChild(    new Person("Bobette", "Germany")   );
+        person1.addChild(new Person("Susan", "Canada"));
+        person1.addChild(new Person("Jill", "Canada"));
+        person1.addChild(new Person("Bobette", "Germany"));
 //generation 2
         //add child to Susan
-        person1.children.get(0).addChild( new Person("Zain","Germany")  );
+        person1.children.get(0).addChild(new Person("Zain", "Germany"));
         //add child to Jill
-        person1.children.get(1).addChild( new Person("Atticus","IceLand")  );
+        person1.children.get(1).addChild(new Person("Atticus", "IceLand"));
         //add child to Bobette
         person1.children.get(2).addChild(new Person("Bob III", "Belise"));
         person1.children.get(2).addChild(new Person("Jasmine", "Canada"));
@@ -33,82 +35,98 @@ public class FamilyTreeMain {
         person1.children.get(2).children.get(1).addChild(new Person("Steve", "USA"));
 //generation 4
         //add child to Bella
-        person1.children.get(1).children.get(0).children.get(0).addChild(new Person("Lucy", "Canada") );
-        person1.children.get(1).children.get(0).children.get(0).addChild(new Person("Ryder", "UK") );
+        person1.children.get(1).children.get(0).children.get(0).addChild(new Person("Lucy", "Canada"));
+        person1.children.get(1).children.get(0).children.get(0).addChild(new Person("Ryder", "UK"));
 
         printFamily(person1);
         System.out.println(countFamily(person1) + " People in total");
         System.out.println("People who live in Canada");
         printCanadians(person1);
-
+        System.out.println("Who do you want to search by?");
+        printFromHere(person1);
 
 
     }//run
 
-    public static void printFromHere(Person ptemp){
 
+    public static void printCanadians(Person Ptemp) {
 
-
+        if (Ptemp.getCountry().equalsIgnoreCase("canada")) {
+            System.out.println(Ptemp.getName());
+            for (int i = 0; i < Ptemp.children.size(); i++) {
+                printCanadians(Ptemp.children.get(i));
+            }
+        } else {
+            for (int i = 0; i < Ptemp.children.size(); i++) {
+                printCanadians(Ptemp.children.get(i));
+            }
+        }
 
 
     }
 
-    public static void printCanadians(Person Ptemp){
+    ;//printcanadians
 
-        if(Ptemp.getCountry().equalsIgnoreCase("canada")){
-            System.out.println( Ptemp.getName());
-            for (int i = 0; i < Ptemp.children.size(); i++) {
-                printCanadians(Ptemp.children.get(i));
-            }
-        }
-        else{
-            for (int i = 0; i < Ptemp.children.size(); i++) {
-                printCanadians(Ptemp.children.get(i));
-            }
-        }
-
-
-
-    };//printcanadians
-
-   public static int countFamily (Person ptemp){
+    public static int countFamily(Person ptemp) {
         int num = 1;
 
-       if (ptemp.children.size() > 0) {
-           for (int i = 0; i < ptemp.children.size(); i++) {
-               num += countFamily(ptemp.children.get(i));
-           }
-       }
-
-
-       return num;
-
-   };//countfamily
-
-
-    public static String printFamily(Person ptemp){
-
-        if(ptemp.children.size() == 0 ) {
-            System.out.println(ptemp.getName());
+        if (ptemp.children.size() > 0) {
+            for (int i = 0; i < ptemp.children.size(); i++) {
+                num += countFamily(ptemp.children.get(i));
+            }
         }
-            else{
+
+
+        return num;
+
+    }
+
+    ;//countfamily
+
+
+    public static String printFamily(Person ptemp) {
+
+        if (ptemp.children.size() == 0) {
             System.out.println(ptemp.getName());
-            for(int i=0; i< ptemp.children.size(); i++){
+        } else {
+            System.out.println(ptemp.getName());
+            for (int i = 0; i < ptemp.children.size(); i++) {
                 printFamily(ptemp.children.get(i));
             }
         }
 
         return "";
-    };//printfamily
+    }
 
-    public static int searchByName( ArrayList<Person> list, String searchTerm ){
-        for (int i = 0; i < list.size(); i++) {
-            if(searchTerm.equalsIgnoreCase( list.get(i).getName() )){
-                return i;
-            }
-        }
-        return -1;
+    ;//printfamily
+
+    public static void printFromHere(Person ptemp){
+
+        String who = Library.input.nextLine();
+        searchByPerson(ptemp, who);
+
+
+
+
     }
 
 
+
+    public static int searchByPerson(Person ptemp, String searchTerm ){
+
+    if( ptemp.getName().equalsIgnoreCase(searchTerm)){
+        printFamily(ptemp);
+    }else{
+        for (int i = 0; i < ptemp.children.size(); i++) {
+            searchByPerson(ptemp.children.get(i), searchTerm);
+        }
+    }
+
+
+
+
+return -1;
 }//class
+
+
+}//main
