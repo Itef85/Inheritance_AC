@@ -25,8 +25,6 @@ public class NetworkMessageMain {
 
 
 
-
-
         System.out.println("Assign 1 Network Messages");
 
         while (true) {
@@ -46,8 +44,25 @@ public class NetworkMessageMain {
 
 
             } else if (option == 2) {
-                System.out.println("Security Message\tMachine ID \tMachine Type");
+               boolean num = false;
+                System.out.println("Security Message\tMachine ID\t  Machine Type");
+                for (int i = 0; i < allMessages.size(); i++) {
+                    //System.out.println(allMessages.get(i).getMessage());
+                    for (int j = 0; j < allMessages.get(i).getMessage().length(); j++) {
+                       if(num == false && allMessages.get(i).getMessage().charAt(j) == '0' ||allMessages.get(i).getMessage().charAt(j) == '1' || allMessages.get(i).getMessage().charAt(j) == '2' || allMessages.get(i).getMessage().charAt(j) == '3' || allMessages.get(i).getMessage().charAt(j) == '4' || allMessages.get(i).getMessage().charAt(j) == '5' || allMessages.get(i).getMessage().charAt(j) == '6' || allMessages.get(i).getMessage().charAt(j) == '7' || allMessages.get(i).getMessage().charAt(j) == '8' || allMessages.get(i).getMessage().charAt(j) == '9'){
+                          num = true;
+                           String first = allMessages.get(i).getMessage().substring(0, j);
+                                String tfirst = first.trim();
+                           String mid = allMessages.get(i).getMessage().substring(j, j+1);
+                                String tmid = mid.trim();
+                           String last = allMessages.get(i).getMessage().substring(j+2, allMessages.get(i).getMessage().length());
+                                String tlast = last.trim();
 
+                           System.out.println(tfirst + "___" + tmid + "___" + tlast + ".");
+                       }
+                    }
+
+                }
 
             } else if (option == 3) {
 
