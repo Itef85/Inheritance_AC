@@ -4,10 +4,14 @@ public class As1_Message {
     private String machineType;
     private String machineId;
     private String warning;
-    private String Message;
+//private String Message;
 
-    public As1_Message(String m) {
-        Message = m;
+    public As1_Message(String message) {
+
+        machineId = message.substring(0,message.indexOf(":") -1);
+        machineType = message.substring(message.indexOf(":") -1, message.indexOf(":"));
+        String wtemp = message.substring(message.indexOf(":") +1, message.length());
+        warning = wtemp.trim();
     }//constructior
 
 
@@ -33,8 +37,8 @@ public class As1_Message {
         return false;
     }
 
-    public String getMessage() {
-        return Message;
-    }
+//    public String getMessage() {
+//        return Message;
+//    }
 }//class
 

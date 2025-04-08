@@ -6,6 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="d347db3d-fdc9-4f1b-940f-de355116165b" name="Changes" comment="Network progect option 2 broken">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/NetworkMessage/As1_Message.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/NetworkMessage/As1_Message.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/NetworkMessage/NetworkMessageMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/NetworkMessage/NetworkMessageMain.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

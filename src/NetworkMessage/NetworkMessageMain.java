@@ -10,7 +10,7 @@ public class NetworkMessageMain {
 
         ArrayList <As1_Message> allMessages = new ArrayList();
 
-        allMessages.add(new As1_Message("Client3: repeated login failure"));
+        allMessages.add(new As1_Message("Client3:repeated login failure"));
         allMessages.add(new As1_Message("Client2:filed password reset on file"));
         allMessages.add(new As1_Message("Server1: file not found"));
         allMessages.add(new As1_Message("Server3: ping not returned"));
@@ -38,31 +38,23 @@ public class NetworkMessageMain {
             System.out.println();
 
             if (option == 1) {
-                System.out.println("what is the message?");
-                String newMessage = Library.input.nextLine();
-                allMessages.add(new As1_Message(newMessage));
+                System.out.println("what is the Message");
+                String newMessages = Library.input.nextLine();
+                allMessages.add(new As1_Message(newMessages));
 
 
             } else if (option == 2) {
                boolean num = false;
                 System.out.println("Security Message\tMachine ID\t  Machine Type");
+
                 for (int i = 0; i < allMessages.size(); i++) {
-                    //System.out.println(allMessages.get(i).getMessage());
-                    for (int j = 0; j < allMessages.get(i).getMessage().length(); j++) {
-                       if(num == false && allMessages.get(i).getMessage().charAt(j) == '0' ||allMessages.get(i).getMessage().charAt(j) == '1' || allMessages.get(i).getMessage().charAt(j) == '2' || allMessages.get(i).getMessage().charAt(j) == '3' || allMessages.get(i).getMessage().charAt(j) == '4' || allMessages.get(i).getMessage().charAt(j) == '5' || allMessages.get(i).getMessage().charAt(j) == '6' || allMessages.get(i).getMessage().charAt(j) == '7' || allMessages.get(i).getMessage().charAt(j) == '8' || allMessages.get(i).getMessage().charAt(j) == '9'){
-                          num = true;
-                           String first = allMessages.get(i).getMessage().substring(0, j);
-                                String tfirst = first.trim();
-                           String mid = allMessages.get(i).getMessage().substring(j, j+1);
-                                String tmid = mid.trim();
-                           String last = allMessages.get(i).getMessage().substring(j+2, allMessages.get(i).getMessage().length());
-                                String tlast = last.trim();
+                        String tfirst = allMessages.get(i).getMachineType();
+                        String tmid = allMessages.get(i).getMachineId();
+                        String tlast = allMessages.get(i).getWarning();
 
-                           System.out.println(tfirst + "___" + tmid + "___" + tlast + ".");
-                       }
-                    }
-
+                    System.out.println( tmid   + "___" + tfirst  + "___" + tlast + ".");
                 }
+
 
             } else if (option == 3) {
 
@@ -74,6 +66,7 @@ public class NetworkMessageMain {
             System.out.println("Logging out. Good Bye.");        }//while
 
     }//run
+
 
 
 
