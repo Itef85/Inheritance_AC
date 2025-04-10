@@ -1,5 +1,7 @@
 package NetworkMessage;
 
+import java.util.ArrayList;
+
 public class As1_Message {
     private String machineType;
     private String machineId;
@@ -36,6 +38,10 @@ public class As1_Message {
     public boolean scanWarnin(String Keyword) {
         return false;
     }
+
+
+
+
 
 //    public String getMessage() {
 //        return Message;

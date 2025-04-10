@@ -38,6 +38,11 @@ public class FamilyTreeMain {
         person1.children.get(1).children.get(0).children.get(0).addChild(new Person("Lucy", "Canada"));
         person1.children.get(1).children.get(0).children.get(0).addChild(new Person("Ryder", "UK"));
 
+        person1.addChild(new Person("Hans", "Canada")); //- 4th child
+        person1.children.get(3).addChild(new Person("Alan", "England"));  //Hans' child
+
+
+
         printFamily(person1);
         System.out.println(countFamily(person1) + " People in total");
         System.out.println("People who live in Canada");

@@ -57,6 +57,22 @@ public class NetworkMessageMain {
 
 
             } else if (option == 3) {
+                boolean istrue = false;
+                System.out.println("what is the error message?");
+    String error = Library.input.nextLine();
+                System.out.println("what is the keyword?");
+    String key = Library.input.nextLine();
+
+
+                for (int i = 0; i < allMessages.size(); i++ ){
+        istrue = scanWarning(error, key);
+
+        if(istrue == true){
+            System.out.println(error + " contains the keyWord");
+        } else{
+        };
+    }//for
+
 
             } else if (option == 4) {
                 break;
@@ -68,9 +84,45 @@ public class NetworkMessageMain {
     }//run
 
 
+    public static boolean scanWarning(String message, String keyword){
+
+        if(message.contains(keyword)){
+            return true;
+        }
+        else {
+            return false;
+        }
+    };
 
 
 
+//public static boolean scanWarning(String message, String keyword){
+//
+//        if(message.contains(keyword)){
+//            return true;
+//        }
+//        else {
+//            return false;
+//        }
+//    };
 
 
-}//class
+//    boolean istrue = false;
+//                System.out.println("what is the error message?");
+//    String error = Library.input.nextLine();
+//                System.out.println("what is the keyword?");
+//    String key = Library.input.nextLine();
+//
+//
+//                for (int i = 0; i < allMessages.size(); i++ ){
+//        istrue = scanWarning(error, key);
+//
+//        if(istrue == true){
+//            System.out.println(error + " contains the keyWord");
+//        } else{
+//            System.out.println(error + " dose not contain the keyWord");
+//        }
+//    }//for
+//
+
+        }//class
