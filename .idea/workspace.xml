@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d347db3d-fdc9-4f1b-940f-de355116165b" name="Changes" comment="on final 30%">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/NetworkMessage/NetworkMessageMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/NetworkMessage/NetworkMessageMain.java" afterDir="false" />
-    </list>
+    <list default="true" id="d347db3d-fdc9-4f1b-940f-de355116165b" name="Changes" comment="messages finnishes TY LAINY" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -360,7 +357,15 @@
       <option name="project" value="LOCAL" />
       <updated>1744306306113</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="messages finnishes TY LAINY">
+      <option name="closed" value="true" />
+      <created>1745428014059</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1745428014059</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -393,6 +398,7 @@
     <MESSAGE value="Network progect option 2" />
     <MESSAGE value="Network progect option 2 broken" />
     <MESSAGE value="on final 30%" />
-    <option name="LAST_COMMIT_MESSAGE" value="on final 30%" />
+    <MESSAGE value="messages finnishes TY LAINY" />
+    <option name="LAST_COMMIT_MESSAGE" value="messages finnishes TY LAINY" />
   </component>
 </project>
