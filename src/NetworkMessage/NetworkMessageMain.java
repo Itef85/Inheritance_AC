@@ -58,20 +58,23 @@ public class NetworkMessageMain {
 
             } else if (option == 3) {
                 boolean istrue = false;
-                System.out.println("what is the error message?");
-    String error = Library.input.nextLine();
                 System.out.println("what is the keyword?");
     String key = Library.input.nextLine();
 
 
                 for (int i = 0; i < allMessages.size(); i++ ){
-        istrue = scanWarning(error, key);
+                    if(scanWarning(allMessages.get(i).getWarning(), key)){
 
-        if(istrue == true){
-            System.out.println(error + " contains the keyWord");
-        } else{
-        };
+                        boolean check = scanWarning(allMessages.get(i).getWarning(), key);
+                        if(check == true){
+                            System.out.println(allMessages.get(i).getWarning());
+                        }
+
+                    }
+
+
     }//for
+
 
 
             } else if (option == 4) {
@@ -84,45 +87,26 @@ public class NetworkMessageMain {
     }//run
 
 
-    public static boolean scanWarning(String message, String keyword){
+    public static boolean scanWarning(String warning, String keyword){
 
-        if(message.contains(keyword)){
-            return true;
-        }
-        else {
+            if( keyword.equals(warning) ) {
+                return true;
+            } else if(warning.startsWith(keyword) && ( warning.charAt(keyword.length()) == ' ' ) ){
+                return true;
+            } else if(warning.endsWith(keyword) && ( warning.charAt(warning.length() - keyword.length() - 1 ) == ' ' ) ){
+                return true;
+            } else if(warning.contains(" " + keyword + " ")){
+                return true;
+            }
             return false;
+
+
         }
-    };
 
 
 
-//public static boolean scanWarning(String message, String keyword){
-//
-//        if(message.contains(keyword)){
-//            return true;
-//        }
-//        else {
-//            return false;
-//        }
-//    };
 
 
-//    boolean istrue = false;
-//                System.out.println("what is the error message?");
-//    String error = Library.input.nextLine();
-//                System.out.println("what is the keyword?");
-//    String key = Library.input.nextLine();
-//
-//
-//                for (int i = 0; i < allMessages.size(); i++ ){
-//        istrue = scanWarning(error, key);
-//
-//        if(istrue == true){
-//            System.out.println(error + " contains the keyWord");
-//        } else{
-//            System.out.println(error + " dose not contain the keyWord");
-//        }
-//    }//for
-//
 
-        }//class
+
+    }//class
