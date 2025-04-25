@@ -20,7 +20,7 @@ public class NetworkMessageMain {
         allMessages.add(new As1_Message("Client3:    diskette disk"));
         allMessages.add(new As1_Message("Router1: missing packet"));
         allMessages.add(new As1_Message("PC4: power surge detected"));
-
+        allMessages.add(new As1_Message("Mri4: nopingerror"   ));
 
 
 
